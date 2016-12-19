@@ -2,12 +2,14 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
 // Import Style
-import styles from './App.css';
+// import styles from './App.css';
 
 // Import Components
 import Helmet from 'react-helmet';
 import DevTools from './components/DevTools';
-import Header from './components/Header/Header';
+// import Header from './components/Header/Header';
+import Header from 'grommet/components/Header';
+import Title from 'grommet/components/Title';
 import Footer from './components/Footer/Footer';
 
 // Import Actions
@@ -49,11 +51,16 @@ export class App extends Component {
             ]}
           />
           <Header
+            direction="row" justify="between" pad={{ horizontal: 'medium' }}
+          >
+            <Title>Grommet standalone</Title>
+          </Header>
+         {/* } <Header
             switchLanguage={lang => this.props.dispatch(switchLanguage(lang))}
             intl={this.props.intl}
             toggleAddPost={this.toggleAddPostSection}
-          />
-          <div className={styles.container}>
+          /> */ }
+          <div>
             {this.props.children}
           </div>
           <Footer />
