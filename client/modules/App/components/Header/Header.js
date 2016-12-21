@@ -1,45 +1,34 @@
-import React, { PropTypes } from 'react';
-import { Link } from 'react-router';
-import { FormattedMessage } from 'react-intl';
+import React from 'react';
 
-// Import Style
-import styles from './Header.css';
+// Import Components
+import Container from 'grommet/components/Header';
+import Box from 'grommet/components/Box';
+import Search from 'grommet/components/Search';
+import Menu from 'grommet/components/Menu';
+import MenuIcon from 'grommet/components/icons/base/menu';
+import Anchor from 'grommet/components/Anchor';
+import Title from 'grommet/components/Title';
 
-export function Header(props, context) {
-  const languageNodes = props.intl.enabledLanguages.map(
-    lang => <li key={lang} onClick={() => props.switchLanguage(lang)} className={lang === props.intl.locale ? styles.selected : ''}>{lang}</li>
-  );
-
+export function Header() {
   return (
-    <div className={styles.header}>
-      <div className={styles['language-switcher']}>
-        <ul>
-          <li><FormattedMessage id="switchLanguage" /></li>
-          {languageNodes}
-        </ul>
-      </div>
-      <div className={styles.content}>
-        <h1 className={styles['site-title']}>
-          <Link to="/" ><FormattedMessage id="siteTitle" /></Link>
-        </h1>
-        {
-          context.router.isActive('/', true)
-            ? <a className={styles['add-post-button']} href="#" onClick={props.toggleAddPost}><FormattedMessage id="addPost" /></a>
-            : null
-        }
-      </div>
-    </div>
+    <Container splash={false} size="small" float={false} fixed={true} colorIndex="neutral-4-t">
+      <Title>AutoMotive</Title>
+      <Box flex={true} justify="end" direction="row" responsive={false}>
+        <Search inline={true} fill={false} size="medium" placeHolder="Search" dropAlign={{ right: 'right' }} />
+        <Menu icon={<MenuIcon />} dropAlign={{ right: 'right' }} >
+          <Anchor to="/" className="active">
+            Home
+          </Anchor>
+          <Anchor className="active">
+            Second
+          </Anchor>
+          <Anchor className="active">
+            Third
+          </Anchor>
+        </Menu>
+      </Box>
+    </Container>
   );
 }
-
-Header.contextTypes = {
-  router: React.PropTypes.object,
-};
-
-Header.propTypes = {
-  toggleAddPost: PropTypes.func.isRequired,
-  switchLanguage: PropTypes.func.isRequired,
-  intl: PropTypes.object.isRequired,
-};
 
 export default Header;
