@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 // Import Components
 import Container from 'grommet/components/Header';
@@ -16,13 +17,13 @@ export function Header() {
       <Box flex={true} justify="end" direction="row" responsive={false}>
         <Search inline={true} fill={false} size="medium" placeHolder="Search" dropAlign={{ right: 'right' }} />
         <Menu icon={<MenuIcon />} dropAlign={{ right: 'right' }} >
-          <Anchor to="/" className="active">
-            Home
+          <Anchor tag="div">
+            <Link to="/">Home</Link>
           </Anchor>
-          <Anchor className="active">
-            Second
+          <Anchor tag="div">
+            <Link to="/cars">Browse</Link>
           </Anchor>
-          <Anchor className="active">
+          <Anchor tag="div" className="active">
             Third
           </Anchor>
         </Menu>

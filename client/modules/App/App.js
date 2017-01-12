@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 
 // Import Components
 import Helmet from 'react-helmet';
@@ -9,7 +9,7 @@ import Container from 'grommet/components/App';
 import Footer from './components/Footer/Footer';
 
 // Import Actions
-import { toggleAddPost } from './AppActions';
+// import { toggleAddPost } from './AppActions';
 
 export class App extends Component {
   constructor(props) {
@@ -21,9 +21,9 @@ export class App extends Component {
     this.setState({isMounted: true}); // eslint-disable-line
   }
 
-  toggleAddPostSection = () => {
-    this.props.dispatch(toggleAddPost());
-  };
+  // toggleAddPostSection = () => {
+  //   this.props.dispatch(toggleAddPost());
+  // };
 
   render() {
     return (
@@ -45,13 +45,13 @@ export class App extends Component {
               },
             ]}
           />
+          <Header />
           <Container>
-            <Header />
             <div>
               {this.props.children}
             </div>
-            <Footer />
           </Container>
+          <Footer />
         </div>
       </div>
     );
@@ -60,15 +60,13 @@ export class App extends Component {
 
 App.propTypes = {
   children: PropTypes.object.isRequired,
-  dispatch: PropTypes.func.isRequired,
-  intl: PropTypes.object.isRequired,
 };
 
 // Retrieve data from store as props
-function mapStateToProps(store) {
-  return {
-    intl: store.intl,
-  };
-}
+// function mapStateToProps(store) {
+//   return {
+//     intl: store.intl,
+//   };
+// }
 
-export default connect(mapStateToProps)(App);
+export default App;
