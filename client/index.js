@@ -2,6 +2,7 @@
  * Client entry point
  */
 import 'grommet/scss/vanilla/index.scss'
+// import 'main.scss'
 
 import React from 'react';
 import { render } from 'react-dom';

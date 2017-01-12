@@ -15,6 +15,6 @@ router.route('/cars').post(CarController.addCar);
 router.route('/cars/:id').put(CarController.updateCar);
 
 // Delete a Car
-router.route('/cars').delete(CarController.deleteCar);
+router.route('/cars/:id').delete(CarController.deleteCar);
 
 export default router;
