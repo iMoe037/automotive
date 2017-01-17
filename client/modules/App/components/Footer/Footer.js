@@ -1,5 +1,8 @@
 import React from 'react';
+
+// Import Components
 import Header from 'grommet/components/Footer';
+import Box from 'grommet/components/Box';
 import Paragraph from 'grommet/components/Paragraph';
 import Menu from 'grommet/components/Menu';
 import Anchor from 'grommet/components/Anchor';
@@ -10,11 +13,13 @@ import Mail from 'grommet/components/icons/base/Mail';
 
 export function Footer() {
   return (
-    <Header justify="between" colorIndex="neutral-1-a" size="medium">
-      <Paragraph margin="none">
-        &copy; AutoMotive - Immad Mohamed - 2016
-      </Paragraph>
-      <Menu direction="row" size="small" dropAlign={{ right: 'right' }} responsive={false}>
+    <Header justify="between" colorIndex="neutral-1-a" size="medium" wrap={true}>
+      <Box pad="small">
+        <Paragraph margin="none">
+          &copy; AutoMotive - Immad Mohamed - 2017
+        </Paragraph>
+      </Box>
+      <Menu direction="row" responsive={false}>
         <Anchor icon={<Globe />} href="https://www.immadmohamed.com" target="_blank" />
         <Anchor icon={<Github />} href="https://github.com/iMoe037/automotive" target="_blank" />
         <Anchor icon={<Linkedin />} href="https://www.linkedin.com/in/immadmohamed" target="_blank" />

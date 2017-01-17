@@ -13,7 +13,9 @@ import Title from 'grommet/components/Title';
 export function Header() {
   return (
     <Container splash={false} size="small" float={false} fixed={true} colorIndex="neutral-4-t">
-      <Title>AutoMotive</Title>
+      <Box pad={{ horizontal: 'small' }}>
+        <Title>AutoMotive</Title>
+      </Box>
       <Box flex={true} justify="end" direction="row" responsive={false}>
         <Search inline={true} fill={false} size="medium" placeHolder="Search" dropAlign={{ right: 'right' }} />
         <Menu icon={<MenuIcon />} dropAlign={{ right: 'right' }} >

@@ -6,14 +6,45 @@ import Box from 'grommet/components/Box';
 import Heading from 'grommet/components/Heading';
 import CarRating from '../CarRating/CarRating';
 
+function vehicleType(prop) {
+  if (prop) {
+    return (
+      <Heading align="center" margin="small" tag="h3">{`Vehicle type: ${prop}`}</Heading>
+    );
+  }
+  return null;
+}
+
+function rateExists(rate) {
+  if (rate) {
+    return (
+      <CarRating rating={rate} />
+    );
+  }
+  return null;
+}
+
+function createPrice(price, msrp) {
+  if (price !== '$0') {
+    return (
+      <Heading align="center" margin="small" tag="h3">{`Price: ${price}`}</Heading>
+    );
+  } else if (msrp) {
+    return (
+      <Heading align="center" margin="small" tag="h3">{`MSRP: ${msrp}`}</Heading>
+    );
+  }
+  return null;
+}
+
 function CarInfo(props) {
   const price = numeral(props.info.price).format('$0,0');
   return (
     <Box justify="start" align="center" wrap={false} margin="small" pad="small" full="horizontal">
       <Heading align="center" margin="small">{`${props.info.make} ${props.info.model}`}</Heading>
-      <Heading align="center" margin="small" tag="h3">{`Vehicle type: ${props.info.ln_type}`}</Heading>
-      <CarRating rating={props.info.rating} />
-      <Heading align="center" margin="small" tag="h3">{`Price: ${price}`}</Heading>
+      {vehicleType(props.info.ln_type)}
+      {rateExists(props.info.rating)}
+      {createPrice(price, props.info.msrp)}
     </Box>
   );
 }

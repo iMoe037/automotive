@@ -5,7 +5,6 @@ import callApi from '../../../../util/apiCaller';
 import CarImage from '../../components/CarImage/CarImage';
 import CarInfo from '../../components/CarInfo/CarInfo';
 import CarSummary from '../../components/CarSummary/CarSummary';
-import CarSimpleStats from '../../components/CarSimpleStats/CarSimpleStats';
 import CarAllStats from '../../components/CarAllStats/CarAllStats';
 import Box from 'grommet/components/Box';
 
@@ -25,11 +24,10 @@ class TestPage extends Component {
           <Box justify="start" align="center" wrap={false}>
             <CarImage images={['http://buyersguide.caranddriver.com/media/assets/submodel/7979.jpg', 'http://photos3.leftlanenews.com/cars/volkswagen/big-images/2012-volkswagen-beetle-21_653.jpg', 'http://photos3.leftlanenews.com/cars/volkswagen/big-images/2012-volkswagen-beetle-22_653.jpg', 'http://photos3.leftlanenews.com/cars/volkswagen/big-images/2012-volkswagen-beetle-23_653.jpg', 'http://photos3.leftlanenews.com/cars/volkswagen/big-images/2012-volkswagen-beetle-24_653.jpg']} />
           </Box>
-          <CarInfo info={{ make: 'Volkswagen', model: 'Beetle', ln_type: 'Coupe', price: 20815 }} />
+          <CarInfo info={{ make: 'Volkswagen', model: 'Beetle', ln_type: 'Coupe', price: 20815, rating: 2.5 }} />
 
         </Box>
-        <CarSummary summary="Its shape is among the most distinctive on the road; surprisingly, the Beetle, offered as a coupe or a convertible, is as fun to drive as it looks. A 170-hp turbo four has a standard five-speed manual for peppy performance; a six-speed automatic is optional. The Beetle Dune gets the automatic, sits 0.2 inch higher, and has off-road styling elements. The 210-hp turbo four R-Line is the hot rod, with either a six-speed manual or a six-speed automatic. Apple CarPlay and Android Auto are optional." />
-        <CarSimpleStats stats={{ topSpeed: 120, cityEpa: 25, highwayEpa: 34 }} />
+        <CarSummary speeds={{ topSpeed: 120, hp: 170, zeroSixty: 7.6 }} stats={{ cityEpa: 25, highwayEpa: 34 }} summary="Its shape is among the most distinctive on the road; surprisingly, the Beetle, offered as a coupe or a convertible, is as fun to drive as it looks. A 170-hp turbo four has a standard five-speed manual for peppy performance; a six-speed automatic is optional. The Beetle Dune gets the automatic, sits 0.2 inch higher, and has off-road styling elements. The 210-hp turbo four R-Line is the hot rod, with either a six-speed manual or a six-speed automatic. Apple CarPlay and Android Auto are optional." />
         <CarAllStats
           dimensions={{
             cargoVolume: '7 cu ft',

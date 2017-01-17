@@ -1,15 +1,23 @@
 import React from 'react';
 
-// Import Components
-import Section from 'grommet/components/Section';
+// Import components
+import Box from 'grommet/components/Box';
+import Heading from 'grommet/components/Heading';
 import Paragraph from 'grommet/components/Paragraph';
+import CarMPGandSpeeds from '../CarMPGandSpeeds/CarMPGandSpeeds';
 
 function CarSummary(props) {
   if (props.summary) {
     return (
-      <Section align="center" separator="horizontal" pad="large">
-        <Paragraph>{props.summary}</Paragraph>
-      </Section>
+      <Box pad="small" separator="horizontal" direction="row" alignContent="center">
+        <Box align="center" pad={{ horizontal: 'medium' }}>
+          <Heading align="center" tag="h2" margin="none">
+            Summary
+          </Heading>
+          <Paragraph>{props.summary}</Paragraph>
+        </Box>
+        <CarMPGandSpeeds mpg={props.mpg} speeds={props.speeds} />
+      </Box>
     );
   }
 }
