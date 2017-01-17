@@ -25,17 +25,28 @@ class CarImage extends Component {
     });
   }
 
+  hasOtherImages() {
+    if (this.state.otherImages.length > 0) {
+      return (
+        <Box pad="small" justify="center" direction="row" responsive={false} separator="all">
+        {this.state.otherImages.map((image, idx) => (
+          <Box margin={{ right: 'small', vertical: 'small' }} separator="all" key={`Image-${idx}`}>
+            <Image onClick={() => this.handleClick(idx)} src={image} size="thumb" />
+          </Box>
+        ))}
+        </Box>
+      );
+    }
+    return null;
+  }
+
   render() {
     return (
-      <Box>
+      <Box margin="small" pad="small">
         <Box size="medium">
           <Image src={this.state.mainImage} full="horizontal" fit="cover" />
         </Box>
-        <Box pad="small" justify="center" direction="row" responsive={false}>
-          {this.state.otherImages.map((image, idx) => (
-            <Image onClick={() => this.handleClick(idx)} key={`Image-${idx}`} src={image} size="thumb" />
-          ))}
-        </Box>
+        {this.hasOtherImages()}
       </Box>
     );
   }

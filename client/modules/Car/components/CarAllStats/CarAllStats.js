@@ -1,7 +1,6 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
 // Import Components
-import Box from 'grommet/components/Box';
 import Accordion from 'grommet/components/Accordion';
 import AccordionPanel from 'grommet/components/AccordionPanel';
 import List from 'grommet/components/List';
@@ -49,7 +48,7 @@ function arrToUl(arr, panelName) {
   }
 
   const listItems = arr.map((elem, idx) => {
-    return <ListItem key={`${panelName}-${idx}`} separator="horizontal"> {elem} </ListItem>;
+    return <ListItem key={`${panelName}-${idx}`}> {elem} </ListItem>;
   });
 
   return (
@@ -62,7 +61,6 @@ function arrToUl(arr, panelName) {
 }
 
 function CarAllStats(props) {
-  checkPropsRender(props);
   if (checkPropsRender(props)) {
     return (
       <Accordion>
@@ -74,12 +72,5 @@ function CarAllStats(props) {
   }
   return null;
 }
-
-CarAllStats.propTypes = {
-  dimensions: PropTypes.object.isRequired,
-  displacement: PropTypes.array.isRequired,
-  engine: PropTypes.array.isRequired,
-  vehicleType: PropTypes.array.isRequired,
-};
 
 export default CarAllStats;
