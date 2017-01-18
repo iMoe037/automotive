@@ -20,7 +20,6 @@ function checkPropVal(props) {
       });
     }
   });
-  console.log(bool);
   return bool;
 }
 
