@@ -6,43 +6,19 @@ import AccordionPanel from 'grommet/components/AccordionPanel';
 import List from 'grommet/components/List';
 import ListItem from 'grommet/components/ListItem';
 
-// Checks prop values for at least one value of not null
-function checkNotNullProp(prop) {
-  let value = false;
-  prop.forEach(elem => {
-    if (elem !== null) {
-      value = true;
-    }
-  });
-  return value;
-}
+// Converts text to propercase
+function convertCase(word) {
+  const firstLetter = word.slice(0, 1).toUpperCase();
+  const restOfWord = word.slice(1).toLowerCase();
 
-// Checks if props have values to render the components
-function checkPropsRender(props) {
-  const values = Object.values(props);
-  let bool = false;
+  let fixedWord = firstLetter + restOfWord;
 
-  values.forEach(elem => {
-    let objToArr;
-
-    if (typeof elem === 'object' && !Array.isArray(elem)) {
-      objToArr = Object.values(props);
-      bool = checkNotNullProp(objToArr);
-      if (bool) {
-        return bool;
-      }
-    } else if (Array.isArray(elem)) {
-      bool = checkNotNullProp(elem);
-      if (bool) {
-        return bool;
-      }
-    }
-  });
-  return bool;
+  fixedWord = (fixedWord === 'Vehicletype') ? 'Vehicle Type' : fixedWord;
+  return fixedWord;
 }
 
 // Array to unorderedlist and accordion panel
-function arrToUl(arr, panelName) {
+function arrToUl(arr, panelName, keyIdx) {
   if (arr === null) {
     return null;
   }
@@ -52,7 +28,7 @@ function arrToUl(arr, panelName) {
   });
 
   return (
-    <AccordionPanel pad="small" heading={panelName}>
+    <AccordionPanel key={`${panelName}-${keyIdx}`} pad="small" heading={panelName}>
       <List>
         {listItems}
       </List>
@@ -60,13 +36,36 @@ function arrToUl(arr, panelName) {
   );
 }
 
+// Removes Null Props and convert to JSX
+function removeNullProps(props) {
+  const propsArr = Object.values(props);
+  const propsKey = Object.keys(props);
+
+  let convertedProps = [];
+  propsArr.forEach((prop, idx) => {
+    const panelName = convertCase(propsKey[idx]);
+    if (prop !== null && Array.isArray(prop)) {
+      convertedProps.push(arrToUl(prop, panelName, idx));
+    } else if (prop !== null && typeof prop === 'object') {
+      const arrVal = [];
+      for (const key in prop) { // eslint-disable-line
+        if (prop.hasOwnProperty(key)) {
+          arrVal.push((`${key}: ${prop[key]}`));
+        }
+      }
+      convertedProps.push(arrToUl(arrVal, panelName, idx));
+    }
+  });
+  convertedProps = (convertedProps.length > 0) ? convertedProps : null;
+  return convertedProps;
+}
+
 function CarAllStats(props) {
-  if (checkPropsRender(props)) {
+  const removedEmptyProps = removeNullProps(props);
+  if (removedEmptyProps) {
     return (
       <Accordion>
-        {arrToUl(props.vehicleType, 'Vehicle Type')}
-        {arrToUl(props.engine, 'Engine')}
-        {arrToUl(props.displacement, 'Displacement')}
+        {removedEmptyProps}
       </Accordion>
     );
   }
