@@ -9,7 +9,8 @@ import sanitizeHtml from 'sanitize-html';
  */
 
 export function getCars(req, res) {
-  Car.find().sort('-make').limit(20).exec((err, cars) => {
+  Car.find().sort('make').limit(20)
+  .exec((err, cars) => {
     if (err) {
       res.status(500).send(err);
     }
