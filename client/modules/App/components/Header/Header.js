@@ -23,7 +23,7 @@ export function Header() {
             <Link to="/">Home</Link>
           </Anchor>
           <Anchor tag="div">
-            <Link to="/cars">Browse</Link>
+            <Link to={{ pathname: '/cars', query: { page: 1 } }}>Browse</Link>
           </Anchor>
           <Anchor tag="div" className="active">
             Third

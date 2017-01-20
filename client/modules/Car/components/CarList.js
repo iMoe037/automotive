@@ -6,6 +6,7 @@ import Split from 'grommet/components/Split';
 import Box from 'grommet/components/Box';
 import CarListItem from './CarListItem/CarListItem';
 import SidebarFilter from './SidebarFilter/SidebarFilter';
+import Paginate from './Paginate/Paginate';
 
 function CarList(props) {
   return (
@@ -19,6 +20,7 @@ function CarList(props) {
           ))
         }
         </Tiles>
+        <Paginate page={props.page} />
       </Box>
     </Split>
   );

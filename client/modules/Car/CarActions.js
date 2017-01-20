@@ -49,9 +49,9 @@ export function addCars(cars) {
   };
 }
 
-export function fetchCars() {
+export function fetchCars(query) {
   return dispatch => {
-    return callApi('cars').then(res => {
+    return callApi('cars', 'get', null, query).then(res => {
       dispatch(addCars(res.cars));
     });
   };

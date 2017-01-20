@@ -1,16 +1,14 @@
 // Import Actions
-import { TOGGLE_ADD_POST } from './AppActions';
+import { GET_CAR_COUNT } from './AppActions';
 
 // Initial State
-const initialState = {
-  showAddPost: false,
-};
+const initialState = { carCount: [0] };
 
 const AppReducer = (state = initialState, action) => {
   switch (action.type) {
-    case TOGGLE_ADD_POST:
+    case GET_CAR_COUNT:
       return {
-        showAddPost: !state.showAddPost,
+        carCount: [action.carCount],
       };
 
     default:
@@ -20,8 +18,8 @@ const AppReducer = (state = initialState, action) => {
 
 /* Selectors */
 
-// Get showAddPost
-export const getShowAddPost = state => state.app.showAddPost;
+// Get Car Count
+export const getCount = state => state.app.carCount[0];
 
 // Export Reducer
 export default AppReducer;

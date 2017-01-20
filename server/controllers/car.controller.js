@@ -9,13 +9,38 @@ import sanitizeHtml from 'sanitize-html';
  */
 
 export function getCars(req, res) {
-  Car.find().sort('make').limit(20)
+  console.log(req.query);
+  let skipItems = null;
+
+  if (req.query.page) {
+    skipItems = (req.query.page - 1) * 20;
+  }
+
+  Car.find().sort('make').skip(skipItems)
+  .limit(20)
   .exec((err, cars) => {
     if (err) {
       res.status(500).send(err);
     }
     res.json({ cars });
   });
+}
+
+/**
+ * Get car count
+ * @param req
+ * @param res
+ * @returns void
+ */
+
+export function getCarCount(req, res) {
+  Car.count()
+    .exec((err, count) => {
+      if (err) {
+        res.status(500).send(err);
+      }
+      res.json(count);
+    });
 }
 
 /**

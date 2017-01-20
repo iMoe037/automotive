@@ -12,19 +12,20 @@ import { getCars } from '../../CarReducer';
 
 class CarListPage extends Component {
   componentDidMount() {
-    this.props.dispatch(fetchCars());
+    const page = this.props.location.query.page;
+    this.props.dispatch(fetchCars(page));
   }
 
   render() {
     return (
       <div>
-        <CarList cars={this.props.cars} />
+        <CarList cars={this.props.cars} page={this.props.location.query.page} />
       </div>
     );
   }
 }
 
-// Actions required to provide data fro this componet to render in server side.
+// Actions required to provide data for this component to render in server side.
 CarListPage.need = [() => { return fetchCars(); }];
 
 // Retrieve data from store as props
