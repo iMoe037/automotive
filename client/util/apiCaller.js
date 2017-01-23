@@ -6,8 +6,8 @@ export const API_URL = (typeof window === 'undefined' || process.env.NODE_ENV ==
   '/api';
 
 export default function callApi(endpoint, method = 'get', body, query) {
-  const page = query ? `?page=${query}` : '';
-  return fetch(`${API_URL}/${endpoint}${page}`, {
+  // const page = query ? `?page=${query}` : '';
+  return fetch(`${API_URL}/${endpoint}${query}`, {
     headers: { 'content-type': 'application/json' },
     method,
     // body: JSON.stringify(body),

@@ -10,13 +10,24 @@ import sanitizeHtml from 'sanitize-html';
 
 export function getCars(req, res) {
   console.log(req.query);
+  const query = req.query;
   let skipItems = null;
 
-  if (req.query.page) {
-    skipItems = (req.query.page - 1) * 20;
+  if (query.page) {
+    skipItems = (query.page - 1) * 20;
   }
 
-  Car.find().sort('make').skip(skipItems)
+  if (query.minRating && query.minRating !== '1' && query.maxRating && query.maxRating !== '5') {
+    query.rating = { $gt: query.minRating || 1, $lt: query.maxRating || 5 };
+  }
+
+  delete query.page;
+  delete query.minRating;
+  delete query.maxRating;
+
+  console.log(query);
+
+  Car.find(query).sort('make').skip(skipItems)
   .limit(20)
   .exec((err, cars) => {
     if (err) {

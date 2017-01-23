@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
+import ReactDOM from 'react-dom';
 
 // Import Components
 import CarList from '../../components/CarList';
@@ -12,9 +13,36 @@ import { getCars } from '../../CarReducer';
 
 class CarListPage extends Component {
   componentDidMount() {
-    const page = this.props.location.query.page;
-    this.props.dispatch(fetchCars(page));
+    this.listener();
   }
+
+  componentWillUnmount() {
+    // this.unsubscribe();
+  }
+
+  listener() {
+    this.context.router.listen(location => {
+      console.log(location);
+      // const page = parseInt(location.query.page, 10);
+      const search = location.search;
+      this.props.dispatch(fetchCars(search));
+      window.scrollTo(0, 0);
+      const scrollDiv = ReactDOM.findDOMNode(this).children[0].children[1];
+      scrollDiv.scrollTop = 0;
+    });
+  }
+
+  // subscriber() {
+  //   const store = this.context.store;
+  //   return store.subscribe(() => {
+  //     const page = parseInt(store.getState().routing.locationBeforeTransitions.query.page, 10);
+  //     this.props.dispatch(fetchCars(page));
+  //     window.scrollTo(0, 0);
+  //     const scrollDiv = ReactDOM.findDOMNode(this).children[0].children[1];
+  //     scrollDiv.scrollTop = 0;
+  //   });
+  // }
+
 
   render() {
     return (
@@ -42,6 +70,7 @@ CarListPage.propTypes = {
 
 CarListPage.contextTypes = {
   router: React.PropTypes.object,
+  store: React.PropTypes.object,
 };
 
 export default connect(mapStateToProps)(CarListPage);

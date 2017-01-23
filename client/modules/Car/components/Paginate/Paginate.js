@@ -24,7 +24,7 @@ class Paginate extends Component {
     const store = this.context.store;
     let currentPage = store.getState();
     currentPage = currentPage.routing.locationBeforeTransitions.query.page;
-    currentPage = parseInt(currentPage);
+    currentPage = parseInt(currentPage, 10);
     const nextPage = add ? currentPage + 1 : currentPage - 1;
     store.dispatch(push({ pathname: 'cars', query: { page: nextPage } }));
   }
