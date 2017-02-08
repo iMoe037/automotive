@@ -9,14 +9,14 @@ import CarAllStats from '../../components/CarAllStats/CarAllStats';
 import Box from 'grommet/components/Box';
 
 class TestPage extends Component {
-  testApi = () => {
-    return callApi('cars').then(res => {
-      console.log(res); // eslint-disable-line no-console
-    });
-  }
-  handleClick = () => {
-    console.log('clicked'); // eslint-disable-line no-console
-  }
+  // testApi = () => {
+  //   return callApi('cars').then(res => {
+  //     console.log(res); // eslint-disable-line no-console
+  //   });
+  // }
+  // handleClick = () => {
+  //   console.log('clicked'); // eslint-disable-line no-console
+  // }
   render() {
     return (
       <div>

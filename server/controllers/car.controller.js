@@ -8,24 +8,28 @@ import sanitizeHtml from 'sanitize-html';
  * @returns void
  */
 
+function filterQuery(query) {
+  const newQuery = { ...query };
+
+  if (newQuery.minRating && newQuery.minRating !== '1' && newQuery.maxRating && newQuery.maxRating !== '5') {
+    newQuery.rating = { $gt: newQuery.minRating || 1, $lt: newQuery.maxRating || 5 };
+  }
+
+  delete newQuery.page;
+  delete newQuery.minRating;
+  delete newQuery.maxRating;
+
+  return newQuery;
+}
+
 export function getCars(req, res) {
-  console.log(req.query);
-  const query = req.query;
-  let skipItems = null;
+  const query = filterQuery(req.query);
 
-  if (query.page) {
-    skipItems = (query.page - 1) * 20;
-  }
+  // Get the page and convert it to an integer
+  let page = req.query.page || 1;
+  page = parseInt(page, 10);
 
-  if (query.minRating && query.minRating !== '1' && query.maxRating && query.maxRating !== '5') {
-    query.rating = { $gt: query.minRating || 1, $lt: query.maxRating || 5 };
-  }
-
-  delete query.page;
-  delete query.minRating;
-  delete query.maxRating;
-
-  console.log(query);
+  const skipItems = (page - 1) * 20;
 
   Car.find(query).sort('make').skip(skipItems)
   .limit(20)
@@ -45,12 +49,14 @@ export function getCars(req, res) {
  */
 
 export function getCarCount(req, res) {
-  Car.count()
+  const query = filterQuery(req.query);
+
+  Car.find(query).count()
     .exec((err, count) => {
       if (err) {
         res.status(500).send(err);
       }
-      res.json(count);
+      res.send(JSON.stringify(count));
     });
 }
 

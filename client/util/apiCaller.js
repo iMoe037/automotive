@@ -5,7 +5,7 @@ export const API_URL = (typeof window === 'undefined' || process.env.NODE_ENV ==
   process.env.BASE_URL || (`http://localhost:${process.env.PORT || Config.port}/api`) :
   '/api';
 
-export default function callApi(endpoint, method = 'get', body, query) {
+export default function callApi(endpoint, method = 'get', body, query = '') {
   // const page = query ? `?page=${query}` : '';
   return fetch(`${API_URL}/${endpoint}${query}`, {
     headers: { 'content-type': 'application/json' },

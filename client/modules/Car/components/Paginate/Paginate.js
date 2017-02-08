@@ -16,24 +16,87 @@ import { getCount } from '../../../App/AppReducer';
 
 
 class Paginate extends Component {
-  componentDidMount() {
+  componentWillMount() {
     this.props.dispatch(fetchCarCount());
   }
 
-  nextPage(add) {
+  componentDidMount() {
+    const store = this.context.store;
+    let currentPage;
+
+    const handleChange = () => {
+      let prevPage = currentPage;
+      currentPage = this.getCurrentPage();
+      if (currentPage !== prevPage) {
+        const state = store.getState();
+        const count = state.app.carCount;
+        this.backPageDisable = this.disablePage('back', count);
+        this.forwardPageDisable = this.disablePage('forward', count);
+        prevPage = currentPage;
+      }
+    };
+    this.unsubscribe = store.subscribe(handleChange);
+  }
+
+  componentWillUnmount() {
+    this.unsubscribe();
+  }
+
+  getCurrentPage() {
     const store = this.context.store;
     let currentPage = store.getState();
     currentPage = currentPage.routing.locationBeforeTransitions.query.page;
-    currentPage = parseInt(currentPage, 10);
-    const nextPage = add ? currentPage + 1 : currentPage - 1;
-    store.dispatch(push({ pathname: 'cars', query: { page: nextPage } }));
+    currentPage = currentPage ? parseInt(currentPage, 10) : 1;
+    return currentPage;
+  }
+
+  nextPage(add, num = 1) {
+    if (!add && this.backPageDisable || add && this.forwardPageDisable) {
+      return;
+    }
+    const store = this.context.store;
+    const state = store.getState();
+    const currentPage = this.getCurrentPage();
+    const nextPage = add ? currentPage + num : currentPage - num;
+    const query = state.routing.locationBeforeTransitions.query;
+    store.dispatch(push({ pathname: 'cars', query: { ...query, page: nextPage } }));
+  }
+
+  disablePage(direction, count) {
+    const currentPage = this.getCurrentPage();
+    let disable = false;
+
+    const intCount = parseInt(count, 10);
+
+    // 20 cars per page get the max
+    const max = (((currentPage + 1) * 20) > intCount);
+
+
+    if (direction === 'back' && currentPage === 1) {
+      disable = true;
+      return disable;
+    } else if (direction === 'forward' && max) {
+      disable = true;
+      return disable;
+    }
+
+    return disable;
   }
 
   render() {
     return (
       <Box direction="row" responsive={false}>
-        <Anchor onClick={() => this.nextPage(false)} icon={<LinkPreviousIcon />} animateIcon={true} primary={true} />
-        <Anchor onClick={() => this.nextPage(true)} icon={<LinkNextIcon />} animateIcon={true} primary={true} />
+        <h1>Count is: {this.props.count} </h1>
+        <Anchor
+          disabled={this.backPageDisable}
+          onClick={() => this.nextPage(false)} icon={<LinkPreviousIcon />}
+          animateIcon={true} primary={true}
+        />
+        <Anchor
+          disabled={this.forwardPageDisable}
+          onClick={() => this.nextPage(true)} icon={<LinkNextIcon />}
+          animateIcon={true} primary={true}
+        />
       </Box>
     );
   }

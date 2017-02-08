@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { push } from 'react-router-redux';
+import { connect } from 'react-redux';
 
 // Import Components
 import Sidebar from 'grommet/components/Sidebar';
@@ -10,16 +11,35 @@ import Button from 'grommet/components/Button';
 import FilterIcon from 'grommet/components/icons/base/Filter';
 import RefreshIcon from 'grommet/components/icons/base/Refresh';
 
+// Import Actions
+import { fetchFilter, fetchCarCount } from '../../../App/AppActions';
+
+// Import Selectors
+import { getFilter, initialState } from '../../../App/AppReducer';
+
 class SidebarFilter extends Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.state.formValues = {
-      make: 'All',
-      ln_type: 'All',
-      minRating: '1',
-      maxRating: '5',
-    };
+  }
+
+  componentWillMount() {
+    this.setState({ formValues: this.props.filter });
+  }
+
+  // componentDidMount() {
+  //   const store = this.context.store;
+
+  //   function handleChange() {
+  //     const storeState = store.getState();
+  //     // console.log(storeState);
+  //   }
+  //   this.unsubscribe = store.subscribe(handleChange);
+  // }
+
+  componentWillUnmount() {
+    console.log('unmounting!');
+    this.unsubscribe();
   }
 
   makes = ['All', 'Acura', 'Alfa Romeo', 'Aston Martin', 'Audi', 'BMW',
@@ -43,6 +63,9 @@ class SidebarFilter extends Component {
 
   filter() {
     const filter = this.state.formValues;
+    const store = this.context.store;
+
+    store.dispatch(fetchFilter(filter));
 
     function checkForAll(key) {
       if (filter[key] === 'All') {
@@ -53,7 +76,16 @@ class SidebarFilter extends Component {
     checkForAll('ln_type');
     filter.page = 1;
 
-    this.context.store.dispatch(push({ pathname: 'cars', query: filter }));
+    store.dispatch(push({ pathname: 'cars', query: filter }));
+    let query = store.getState();
+    query = query.routing.locationBeforeTransitions.search;
+    store.dispatch(fetchCarCount(query));
+  }
+
+  reset() {
+    const filter = initialState.filter;
+    this.context.store.dispatch(fetchFilter(filter));
+    this.context.store.dispatch(push({ pathname: '/cars', query: { page: 1 } }));
   }
 
   render() {
@@ -95,6 +127,7 @@ class SidebarFilter extends Component {
             label="Reset"
             secondary={true}
             type="reset"
+            onClick={() => this.reset()}
           />
           <Button
             icon={<FilterIcon />}
@@ -108,9 +141,14 @@ class SidebarFilter extends Component {
     );
   }
 }
+function mapStateToProps(state) {
+  return {
+    filter: getFilter(state),
+  };
+}
 
 SidebarFilter.contextTypes = {
   store: React.PropTypes.object,
 };
 
-export default SidebarFilter;
+export default connect(mapStateToProps)(SidebarFilter);

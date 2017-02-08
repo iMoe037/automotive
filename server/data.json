@@ -41,7 +41,8 @@
             "2-passenger",
             "2-door coupe"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": 14,
@@ -85,7 +86,8 @@
             "7-passenger",
             "4-door hatchback"
         ],
-        "zero_sixty": 5.8
+        "zero_sixty": 5.8,
+        "ln_type": "SUV"
     },
     {
         "city_epa": null,
@@ -119,7 +121,8 @@
             "3-6-passenger",
             "2- or 4-door truck"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Pickup Truck"
     },
     {
         "city_epa": null,
@@ -153,7 +156,8 @@
             "3-6-passenger",
             "2- or 4-door truck"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Pickup Truck"
     },
     {
         "city_epa": 13,
@@ -197,7 +201,8 @@
             "5-passenger",
             "2-door coupe"
         ],
-        "zero_sixty": 3.6
+        "zero_sixty": 3.6,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": 14,
@@ -241,7 +246,8 @@
             "2- or 4-passenger",
             "2-door coupe"
         ],
-        "zero_sixty": 4.3
+        "zero_sixty": 4.3,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": 19,
@@ -436,7 +442,7 @@
             "images": "http://www.leftlanenews.com/photos/bmw-4-series-gran-coupe-picture-1-1.html",
             "specs": "http://www.leftlanenews.com/new-car-buying/bmw/4-series-gran-coupe/specifications/"
         },
-        "ln_type": "Hatchback",
+        "ln_type": "Sedan",
         "make": "BMW",
         "model": "4-series Gran Coupe",
         "msrp": "$48,945 - $50,945",
@@ -1172,7 +1178,8 @@
             "5-",
             "or 6-passenger; 2- or 4-door pickup"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Pickup Truck"
     },
     {
         "city_epa": null,
@@ -1215,7 +1222,8 @@
             "5-passenger",
             "4-door truck"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Pickup Truck"
     },
     {
         "city_epa": 20,
@@ -1354,7 +1362,8 @@
             "5-passenger",
             "2+2- or 4-door pickup"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Pickup Truck"
     },
     {
         "city_epa": 15,
@@ -1397,7 +1406,8 @@
             "8-passenger",
             "4-door hatchback"
         ],
-        "zero_sixty": 6.4
+        "zero_sixty": 6.4,
+        "ln_type": "SUV"
     },
     {
         "city_epa": 26,
@@ -1465,7 +1475,8 @@
         "transmission": null,
         "vehicle_type": "Subcompact Crossovers",
         "vehicle_type_more": null,
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "SUV"
     },
     {
         "city_epa": null,
@@ -1488,7 +1499,8 @@
         "transmission": null,
         "vehicle_type": "Full-size Vans",
         "vehicle_type_more": null,
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Van"
     },
     {
         "city_epa": 110,
@@ -2093,7 +2105,8 @@
             "or 6-passenger",
             "2- or 4-door pickup"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Pickup Truck"
     },
     {
         "city_epa": null,
@@ -2136,7 +2149,8 @@
             "5-passenger",
             "4-door truck"
         ],
-        "zero_sixty": 7.4
+        "zero_sixty": 7.4,
+        "ln_type": "Pickup Truck"
     },
     {
         "city_epa": 44,
@@ -2172,7 +2186,8 @@
             "5-passenger",
             "4-door hatchback"
         ],
-        "zero_sixty": 7.9
+        "zero_sixty": 7.9,
+        "ln_type": "Hatchback"
     },
     {
         "city_epa": null,
@@ -2301,7 +2316,8 @@
         "transmission": null,
         "vehicle_type": "Full-size Vans",
         "vehicle_type_more": null,
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Van"
     },
     {
         "city_epa": null,
@@ -2535,7 +2551,8 @@
             "2-passenger",
             "2-door targa"
         ],
-        "zero_sixty": 3.8
+        "zero_sixty": 3.8,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": 20,
@@ -2718,7 +2735,8 @@
             "5-passenger",
             "4-door hatchback"
         ],
-        "zero_sixty": 6.5
+        "zero_sixty": 6.5,
+        "ln_type": "Sedan"
     },
     {
         "city_epa": null,
@@ -2761,7 +2779,8 @@
             "4-passenger",
             "2-door hatchback"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": null,
@@ -3196,7 +3215,8 @@
             "2-passenger",
             "2-door convertible"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": 15,
@@ -3336,7 +3356,8 @@
             "5-passenger",
             "4-door sedan"
         ],
-        "zero_sixty": 3.4
+        "zero_sixty": 3.4,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": null,
@@ -3378,7 +3399,8 @@
             "5-passenger",
             "4-door sedan"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Sedan"
     },
     {
         "city_epa": 20,
@@ -3454,7 +3476,8 @@
         "transmission": null,
         "vehicle_type": "Mid-size Luxury Crossovers and SUVs",
         "vehicle_type_more": null,
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "SUV"
     },
     {
         "city_epa": null,
@@ -3496,7 +3519,8 @@
             "5-passenger",
             "4-door sedan"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Sedan"
     },
     {
         "city_epa": 19,
@@ -3593,7 +3617,8 @@
             "4-passenger",
             "2-door hatchback"
         ],
-        "zero_sixty": 4.2
+        "zero_sixty": 4.2,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": null,
@@ -3626,7 +3651,7 @@
             "images": "http://www.leftlanenews.com/photos/ferrari-laferrari-picture-1-1.html",
             "specs": "http://www.leftlanenews.com/new-car-buying/ferrari/laferrari/specifications/"
         },
-        "ln_type": null,
+        "ln_type": "Coupe",
         "make": "Ferrari",
         "model": "LaFerrari",
         "msrp": "$1,420,112",
@@ -3730,7 +3755,8 @@
             "4-passenger",
             "2-door coupe"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": 13,
@@ -3764,7 +3790,8 @@
             "4-passenger",
             "2-door coupe"
         ],
-        "zero_sixty": 3.4
+        "zero_sixty": 3.4,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": null,
@@ -3861,7 +3888,8 @@
             "4-passenger",
             "4-door hatchback"
         ],
-        "zero_sixty": 3.5
+        "zero_sixty": 3.5,
+        "ln_type": "SUV"
     },
     {
         "city_epa": null,
@@ -3903,7 +3931,8 @@
             "5-passenger",
             "4-door sedan"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Sedan"
     },
     {
         "city_epa": null,
@@ -4187,7 +4216,8 @@
             "4-passenger",
             "4-door hatchback"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Sedan"
     },
     {
         "city_epa": 12,
@@ -4335,7 +4365,8 @@
             "5-passenger",
             "4-door hatchback"
         ],
-        "zero_sixty": 3.7
+        "zero_sixty": 3.7,
+        "ln_type": "SUV"
     },
     {
         "city_epa": 18,
@@ -4581,7 +4612,8 @@
             "2-passenger",
             "2-door convertible"
         ],
-        "zero_sixty": 5.6
+        "zero_sixty": 5.6,
+        "ln_type": "Roadster"
     },
     {
         "city_epa": null,
@@ -4604,7 +4636,8 @@
         "transmission": null,
         "vehicle_type": "Premium Sport Compacts",
         "vehicle_type_more": null,
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Sedan"
     },
     {
         "city_epa": 15,
@@ -5312,7 +5345,8 @@
             "5-passenger",
             "4-door hatchback"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Wagon"
     },
     {
         "city_epa": 18,
@@ -5408,7 +5442,8 @@
             "5-passenger",
             "4-door hatchback"
         ],
-        "zero_sixty": 6.5
+        "zero_sixty": 6.5,
+        "ln_type": "Sedan"
     },
     {
         "city_epa": 14,
@@ -5808,7 +5843,8 @@
             "2-passenger",
             "2-door coupe"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": 18,
@@ -5958,7 +5994,8 @@
             "2+2-passenger",
             "2-door coupe"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": 15,
@@ -6315,7 +6352,8 @@
             "4-passenger",
             "2-door coupe"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": 24,
@@ -6511,7 +6549,8 @@
             "5-passenger",
             "5-door wagon"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "SUV"
     },
     {
         "city_epa": 23,
@@ -6641,7 +6680,8 @@
         "transmission": null,
         "vehicle_type": "Hybrid Vehicles",
         "vehicle_type_more": null,
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Sedan"
     },
     {
         "city_epa": 20,
@@ -7184,7 +7224,8 @@
             "rear- or 4-wheel-drive",
             "2-door hatchback or convertible"
         ],
-        "zero_sixty": 4.9
+        "zero_sixty": 4.9,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": null,
@@ -7259,7 +7300,8 @@
         "transmission": null,
         "vehicle_type": "Mid-size Pickup Trucks",
         "vehicle_type_more": null,
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Pickup Truck"
     },
     {
         "city_epa": 13,
@@ -7409,7 +7451,8 @@
             "2-passenger",
             "2-door coupe or convertible"
         ],
-        "zero_sixty": 3.5
+        "zero_sixty": 3.5,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": 19,
@@ -7843,7 +7886,7 @@
             "images": "http://www.leftlanenews.com/photos/jaguar-xe-picture-1-1.html",
             "specs": "http://www.leftlanenews.com/new-car-buying/jaguar/xe/specifications/"
         },
-        "ln_type": null,
+        "ln_type": "Sedan",
         "make": "Jaguar",
         "model": "XE",
         "msrp": "$35,895 - $58,995",
@@ -7883,7 +7926,8 @@
         "transmission": null,
         "vehicle_type": "Subcompact Crossovers",
         "vehicle_type_more": null,
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "SUV"
     },
     {
         "city_epa": 20,
@@ -8182,7 +8226,8 @@
         "transmission": null,
         "vehicle_type": "Hypercars",
         "vehicle_type_more": null,
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": 13,
@@ -8223,7 +8268,8 @@
             "5-passenger",
             "5-door wagon"
         ],
-        "zero_sixty": 4.7
+        "zero_sixty": 4.7,
+        "ln_type": "SUV"
     },
     {
         "city_epa": 18,
@@ -8259,7 +8305,7 @@
             "images": "http://www.leftlanenews.com/photos/jaguar-f-pace-picture-1-1.html",
             "specs": "http://www.leftlanenews.com/new-car-buying/jaguar/f-pace/specifications/"
         },
-        "ln_type": null,
+        "ln_type": "SUV",
         "make": "Jaguar",
         "model": "F-Pace",
         "msrp": "$41,985 - $70,695",
@@ -8320,7 +8366,8 @@
             "2-passenger",
             "2-door coupe"
         ],
-        "zero_sixty": 2.7
+        "zero_sixty": 2.7,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": 14,
@@ -8362,7 +8409,8 @@
             "2-passenger",
             "2-door convertible"
         ],
-        "zero_sixty": 2.5
+        "zero_sixty": 2.5,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": 18,
@@ -8459,7 +8507,8 @@
             "5-passenger",
             "4-door hatchback"
         ],
-        "zero_sixty": 4.6
+        "zero_sixty": 4.6,
+        "ln_type": "SUV"
     },
     {
         "city_epa": 20,
@@ -8503,7 +8552,8 @@
             "4-passenger",
             "2-door convertible"
         ],
-        "zero_sixty": 8.1
+        "zero_sixty": 8.1,
+        "ln_type": "SUV"
     },
     {
         "city_epa": 21,
@@ -8579,7 +8629,8 @@
         "transmission": null,
         "vehicle_type": "Mid-size Luxury Crossovers and SUVs",
         "vehicle_type_more": null,
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "SUV"
     },
     {
         "city_epa": 29,
@@ -9006,7 +9057,8 @@
             "4-passenger",
             "2-door coupe"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": 17,
@@ -9101,7 +9153,8 @@
             "7-passenger",
             "4-door hatchback"
         ],
-        "zero_sixty": 6.5
+        "zero_sixty": 6.5,
+        "ln_type": "SUV"
     },
     {
         "city_epa": 17,
@@ -9296,7 +9349,8 @@
             "5-passenger",
             "4-door sedan"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Sedan"
     },
     {
         "city_epa": null,
@@ -9749,7 +9803,8 @@
             "2- or 2+2-passenger",
             "2-door coupe"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": null,
@@ -9792,7 +9847,8 @@
             "5-passenger",
             "4-door hatchback"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "SUV"
     },
     {
         "city_epa": 25,
@@ -9836,7 +9892,8 @@
             "5-passenger",
             "4-door hatchback"
         ],
-        "zero_sixty": 7.4
+        "zero_sixty": 7.4,
+        "ln_type": "Sedan"
     },
     {
         "city_epa": 26,
@@ -9880,7 +9937,8 @@
             "5-passenger",
             "4-door sedan"
         ],
-        "zero_sixty": 7.3
+        "zero_sixty": 7.3,
+        "ln_type": "Sedan"
     },
     {
         "city_epa": 22,
@@ -10073,7 +10131,7 @@
             "images": "http://www.leftlanenews.com/photos/lexus-gs-f-picture-1-1.html",
             "specs": "http://www.leftlanenews.com/new-car-buying/lexus/gs-f/specifications/"
         },
-        "ln_type": null,
+        "ln_type": "Sedan",
         "make": "Lexus",
         "model": "GS F",
         "msrp": "$85,415",
@@ -10238,7 +10296,8 @@
             "2-passenger",
             "2-door coupe"
         ],
-        "zero_sixty": 2.9
+        "zero_sixty": 2.9,
+        "ln_type": "Sedan"
     },
     {
         "city_epa": 17,
@@ -10335,7 +10394,8 @@
             "5-passenger",
             "4-door hatchback"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "SUV"
     },
     {
         "city_epa": null,
@@ -10358,7 +10418,8 @@
         "transmission": null,
         "vehicle_type": "Sports Cars",
         "vehicle_type_more": null,
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Roadster"
     },
     {
         "city_epa": 18,
@@ -10479,7 +10540,8 @@
         "transmission": null,
         "vehicle_type": "Premium Sports Cars",
         "vehicle_type_more": null,
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Roadster"
     },
     {
         "city_epa": null,
@@ -10549,7 +10611,8 @@
         "transmission": null,
         "vehicle_type": "Premium Sports Cars",
         "vehicle_type_more": null,
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Roadster"
     },
     {
         "city_epa": null,
@@ -10593,7 +10656,8 @@
             "2-passenger",
             "2-door convertible"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": null,
@@ -10637,7 +10701,8 @@
             "7-passenger",
             "4-door hatchback"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "SUV"
     },
     {
         "city_epa": null,
@@ -10680,7 +10745,8 @@
             "5-passenger",
             "4-door hatchback"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "SUV"
     },
     {
         "city_epa": null,
@@ -10723,7 +10789,8 @@
             "4-passenger",
             "2-door convertible"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Sedan"
     },
     {
         "city_epa": null,
@@ -10765,7 +10832,8 @@
             "5-passenger",
             "5-door hatchback"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "SUV"
     },
     {
         "city_epa": null,
@@ -10809,7 +10877,8 @@
             "5-passenger",
             "4-door hatchback"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "SUV"
     },
     {
         "city_epa": null,
@@ -10854,7 +10923,8 @@
             "5-passenger",
             "4-door tycoon transport"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "SUV"
     },
     {
         "city_epa": null,
@@ -10877,7 +10947,8 @@
         "transmission": null,
         "vehicle_type": "Compact Luxury Crossovers and SUVs",
         "vehicle_type_more": null,
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Sedan"
     },
     {
         "city_epa": null,
@@ -10900,7 +10971,8 @@
         "transmission": null,
         "vehicle_type": "Performance Four-door Coupes",
         "vehicle_type_more": null,
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Sedan"
     },
     {
         "city_epa": null,
@@ -10943,7 +11015,8 @@
             "5-passenger",
             "4-door sedan"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Sedan"
     },
     {
         "city_epa": 15,
@@ -11040,7 +11113,8 @@
             "5-passenger",
             "4-door sedan"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Sedan"
     },
     {
         "city_epa": null,
@@ -11084,7 +11158,8 @@
             "4-passenger",
             "2-door coupe"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Sedan"
     },
     {
         "city_epa": null,
@@ -11128,7 +11203,8 @@
             "5-passenger",
             "4-door sedan"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Sedan"
     },
     {
         "city_epa": null,
@@ -11162,7 +11238,8 @@
             "2-passenger",
             "2-door convertible"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Roadster"
     },
     {
         "city_epa": 17,
@@ -11206,7 +11283,8 @@
             "7-passenger",
             "4-door hatchback"
         ],
-        "zero_sixty": 5.7
+        "zero_sixty": 5.7,
+        "ln_type": "SUV"
     },
     {
         "city_epa": 13,
@@ -11444,7 +11522,8 @@
             "5-passenger",
             "4-door hatchback"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "SUV"
     },
     {
         "city_epa": 27,
@@ -11635,7 +11714,8 @@
         "transmission": null,
         "vehicle_type": "Ultimate Luxury Sedans",
         "vehicle_type_more": null,
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Sedan"
     },
     {
         "city_epa": 35,
@@ -11679,7 +11759,8 @@
             "5-passenger",
             "4-door sedan"
         ],
-        "zero_sixty": 12.8
+        "zero_sixty": 12.8,
+        "ln_type": "Sedan"
     },
     {
         "city_epa": 21,
@@ -11764,7 +11845,7 @@
             "images": "http://www.leftlanenews.com/photos/mercedes-benz-gla-class-picture-1-1.html",
             "specs": "http://www.leftlanenews.com/new-car-buying/mercedes-benz/gla-class/specifications/"
         },
-        "ln_type": null,
+        "ln_type": "SUV",
         "make": "Mercedes-Benz",
         "model": "GLA-class",
         "msrp": "$33,425 - $35,425",
@@ -11877,7 +11958,8 @@
             "2-passenger",
             "2-door hatchback"
         ],
-        "zero_sixty": 5.1
+        "zero_sixty": 5.1,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": 18,
@@ -12229,7 +12311,8 @@
             "5-passenger",
             "4-door sedan"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Sedan"
     },
     {
         "city_epa": 13,
@@ -12482,7 +12565,8 @@
             "5-passenger",
             "5-door hatchback"
         ],
-        "zero_sixty": 6.7
+        "zero_sixty": 6.7,
+        "ln_type": "SUV"
     },
     {
         "city_epa": null,
@@ -12524,7 +12608,8 @@
             "2-passenger",
             "4-door van"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Van"
     },
     {
         "city_epa": 24,
@@ -13195,7 +13280,8 @@
             "4-passenger",
             "5-door hatchback"
         ],
-        "zero_sixty": 3.5
+        "zero_sixty": 3.5,
+        "ln_type": "Sedan"
     },
     {
         "city_epa": 22,
@@ -13239,7 +13325,8 @@
             "2-passenger",
             "2-door hatchback"
         ],
-        "zero_sixty": 3.9
+        "zero_sixty": 3.9,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": 20,
@@ -13283,7 +13370,8 @@
             "2+2-passenger",
             "2-door coupe"
         ],
-        "zero_sixty": 4
+        "zero_sixty": 4,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": 22,
@@ -13377,7 +13465,8 @@
             "5-passenger",
             "5-door wagon"
         ],
-        "zero_sixty": 4.2
+        "zero_sixty": 4.2,
+        "ln_type": "SUV"
     },
     {
         "city_epa": null,
@@ -13400,7 +13489,8 @@
         "transmission": null,
         "vehicle_type": "Heavy Duty Pickup Trucks",
         "vehicle_type_more": null,
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Pickup Truck"
     },
     {
         "city_epa": null,
@@ -13710,7 +13800,7 @@
             "images": "http://www.leftlanenews.com/photos/mercedes-benz-b-class-electric-drive-picture-1-1.html",
             "specs": "http://www.leftlanenews.com/new-car-buying/mercedes-benz/merecedes-benz-b-class-electric-drive/specifications/"
         },
-        "ln_type": null,
+        "ln_type": "Hatchback",
         "make": "Mercedes-Benz",
         "model": "B-class Electric Drive",
         "msrp": "$42,375",
@@ -13765,7 +13855,8 @@
             "5-passenger",
             "4-door hatchback"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "SUV"
     },
     {
         "city_epa": null,
@@ -13808,7 +13899,8 @@
             "2+2-passenger",
             "2-door coupe or convertible"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": 27,
@@ -13903,7 +13995,8 @@
             "4-passenger",
             "2-door convertible"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": 21,
@@ -13946,7 +14039,8 @@
             "2-passenger",
             "2-door convertible"
         ],
-        "zero_sixty": 3.5
+        "zero_sixty": 3.5,
+        "ln_type": "Convertible"
     },
     {
         "city_epa": 13,
@@ -14035,7 +14129,8 @@
             "2-passenger",
             "2-door hatchback"
         ],
-        "zero_sixty": 9.8
+        "zero_sixty": 9.8,
+        "ln_type": "Coupe"
     },
     {
         "city_epa": null,
@@ -14123,7 +14218,7 @@
             "images": "http://www.leftlanenews.com/photos/porsche-911-gt3-rs-picture-1-1.html",
             "specs": "http://www.leftlanenews.com/new-car-buying/porsche/911-gt3-rs/specifications/"
         },
-        "ln_type": null,
+        "ln_type": "Coupe",
         "make": "Porsche",
         "model": "911 GT3 RS",
         "msrp": "$131,450 - $176,950",
@@ -14228,7 +14323,7 @@
             "images": "http://www.leftlanenews.com/photos/ram-promaster-city-picture-1-1.html",
             "specs": "http://www.leftlanenews.com/new-car-buying/ram/promaster-city/specifications/"
         },
-        "ln_type": null,
+        "ln_type": "Van",
         "make": "Ram",
         "model": "ProMaster City",
         "msrp": "$24,440 - $27,065",
@@ -14392,7 +14487,8 @@
             "5-passenger",
             "4-door hatchback"
         ],
-        "zero_sixty": 10.2
+        "zero_sixty": 10.2,
+        "ln_type": "Hatchback"
     },
     {
         "city_epa": null,
@@ -14426,7 +14522,7 @@
             "images": "http://www.leftlanenews.com/photos/rolls-royce-wraith-picture-1-1.html",
             "specs": "http://www.leftlanenews.com/new-car-buying/rolls-royce/wraith/specifications/"
         },
-        "ln_type": null,
+        "ln_type": "Coupe",
         "make": "Rolls-Royce",
         "model": "Wraith",
         "msrp": "$306,350",
@@ -15017,7 +15113,8 @@
             "4-passenger",
             "4-door hatchback"
         ],
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Sedan"
     },
     {
         "city_epa": 27,
@@ -15240,7 +15337,8 @@
         "transmission": null,
         "vehicle_type": "Subcompact Crossovers",
         "vehicle_type_more": null,
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "SUV"
     },
     {
         "city_epa": null,
@@ -15260,7 +15358,7 @@
             "images": "http://www.leftlanenews.com/photos/toyota-yaris-ia-picture-1-1.html",
             "specs": "http://www.leftlanenews.com/new-car-buying/toyota/yaris-ia/specifications/"
         },
-        "ln_type": null,
+        "ln_type": "Sedan",
         "make": "Toyota",
         "model": "Yaris iA",
         "msrp": "$16,815 - $17,915",
@@ -15815,7 +15913,8 @@
             "5-passenger",
             "4-door hatchback"
         ],
-        "zero_sixty": 5.8
+        "zero_sixty": 5.8,
+        "ln_type": "Hatchback"
     },
     {
         "city_epa": 54,
@@ -15890,7 +15989,8 @@
         "transmission": null,
         "vehicle_type": "Three-row Mid-size Crossovers and SUVs",
         "vehicle_type_more": null,
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "SUV"
     },
     {
         "city_epa": 29,
@@ -15963,7 +16063,7 @@
             "images": "http://www.leftlanenews.com/photos/toyota-corolla-im-picture-1-1.html",
             "specs": "http://www.leftlanenews.com/new-car-buying/toyota/corolla-im/specifications/"
         },
-        "ln_type": null,
+        "ln_type": "Hatchback",
         "make": "Toyota",
         "model": "Corolla iM",
         "msrp": "$19,615 - $20,355",
@@ -16095,7 +16195,8 @@
         "transmission": null,
         "vehicle_type": "Electric Vehicles",
         "vehicle_type_more": null,
-        "zero_sixty": null
+        "zero_sixty": null,
+        "ln_type": "Sedan"
     },
     {
         "city_epa": 21,
@@ -16131,7 +16232,7 @@
             "images": "http://www.leftlanenews.com/photos/toyota-86-picture-1-1.html",
             "specs": "http://www.leftlanenews.com/new-car-buying/toyota/86/specifications/"
         },
-        "ln_type": null,
+        "ln_type": "Coupe",
         "make": "Toyota",
         "model": "86",
         "msrp": "$27,120 - $27,840",
@@ -16533,7 +16634,7 @@
             "images": "http://www.leftlanenews.com/photos/rolls-royce-dawn-picture-1-1.html",
             "specs": "http://www.leftlanenews.com/new-car-buying/rolls-royce/dawn/specifications/"
         },
-        "ln_type": null,
+        "ln_type": "Convertible",
         "make": "Rolls-Royce",
         "model": "Dawn",
         "msrp": "$337,750",
@@ -16797,7 +16898,7 @@
             "images": "http://www.leftlanenews.com/photos/volkswagen-golf-alltrack-picture-1-1.html",
             "specs": "http://www.leftlanenews.com/new-car-buying/volkswagen/golf-alltrack/specifications/"
         },
-        "ln_type": null,
+        "ln_type": "Wagon",
         "make": "Volkswagen",
         "model": "Golf Alltrack",
         "msrp": "$26,670 - $33,710",
@@ -16846,7 +16947,7 @@
             "images": "http://www.leftlanenews.com/photos/tesla-model-x-picture-1-1.html",
             "specs": "http://www.leftlanenews.com/new-car-buying/tesla/model-x/specifications/"
         },
-        "ln_type": null,
+        "ln_type": "SUV",
         "make": "Tesla",
         "model": "Model X",
         "msrp": "$75,200 - $136,700",

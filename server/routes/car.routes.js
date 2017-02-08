@@ -6,7 +6,7 @@ const router = new Router();
 router.route('/cars').get(CarController.getCars);
 
 // Get car count
-router.route('/cars/count').get(CarController.getCarCount);
+router.route('/carcount').get(CarController.getCarCount);
 
 // Get one car by id
 router.route('/cars/:id').get(CarController.getCar);
