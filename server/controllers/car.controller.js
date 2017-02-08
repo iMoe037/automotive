@@ -8,14 +8,56 @@ import sanitizeHtml from 'sanitize-html';
  * @returns void
  */
 
+function filterQuery(query) {
+  const newQuery = { ...query };
+
+  if (newQuery.minRating && newQuery.minRating !== '1' && newQuery.maxRating && newQuery.maxRating !== '5') {
+    newQuery.rating = { $gt: newQuery.minRating || 1, $lt: newQuery.maxRating || 5 };
+  }
+
+  delete newQuery.page;
+  delete newQuery.minRating;
+  delete newQuery.maxRating;
+
+  return newQuery;
+}
+
 export function getCars(req, res) {
-  Car.find().sort('make').limit(20)
+  const query = filterQuery(req.query);
+
+  // Get the page and convert it to an integer
+  let page = req.query.page || 1;
+  page = parseInt(page, 10);
+
+  const skipItems = (page - 1) * 20;
+
+  Car.find(query).sort('make').skip(skipItems)
+  .limit(20)
   .exec((err, cars) => {
     if (err) {
       res.status(500).send(err);
     }
     res.json({ cars });
   });
+}
+
+/**
+ * Get car count
+ * @param req
+ * @param res
+ * @returns void
+ */
+
+export function getCarCount(req, res) {
+  const query = filterQuery(req.query);
+
+  Car.find(query).count()
+    .exec((err, count) => {
+      if (err) {
+        res.status(500).send(err);
+      }
+      res.send(JSON.stringify(count));
+    });
 }
 
 /**
