@@ -14,11 +14,12 @@ import CarInfo from '../../components/CarInfo/CarInfo';
 import CarSummary from '../../components/CarSummary/CarSummary';
 import CarAllStats from '../../components/CarAllStats/CarAllStats';
 import Box from 'grommet/components/Box';
+import Container from 'grommet/components/App';
 
 
 export function CarDetailPage(props) {
   return (
-    <div>
+    <Container>
       <Helmet title={`${props.car.make} - ${props.car.model}`} />
       <Box direction="row" justify="start" align="center" wrap={false}>
         <Box justify="start" align="center" wrap={false}>
@@ -32,7 +33,7 @@ export function CarDetailPage(props) {
         summary={props.car.summary}
       />
       <CarAllStats dimensions={props.car.dimensions} displacement={props.car.displacement} engine={props.car.engine} vehicleType={props.car.vehicle_type_more} />
-    </div>
+    </Container>
   );
 }
 

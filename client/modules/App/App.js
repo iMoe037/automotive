@@ -5,7 +5,6 @@ import React, { Component, PropTypes } from 'react';
 import Helmet from 'react-helmet';
 import DevTools from './components/DevTools';
 import Header from './components/Header/Header';
-import Container from 'grommet/components/App';
 import Footer from './components/Footer/Footer';
 
 // Import Actions
@@ -46,11 +45,9 @@ export class App extends Component {
             ]}
           />
           <Header />
-          <Container>
-            <div>
-              {this.props.children}
-            </div>
-          </Container>
+          <div>
+            {this.props.children}
+          </div>
           <Footer />
         </div>
       </div>

@@ -10,6 +10,7 @@ function CarListItem(props) {
     <Tile>
       <Link to={`cars/${props.car._id}`}>
         <Card
+          textAlign="center"
           thumbnail={props.car.images[0]}
           heading={`${props.car.make} ${props.car.model}`}
           description={props.car.overview}
