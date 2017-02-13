@@ -14,10 +14,14 @@ export function Header() {
   return (
     <Container splash={false} size="small" float={false} fixed={true} colorIndex="neutral-4-t">
       <Box pad={{ horizontal: 'small' }}>
-        <Title>AutoMotive</Title>
+        <Title>
+          <Link to={{ pathname: '/' }}> AutoMotive </Link>
+        </Title>
       </Box>
       <Box flex={true} justify="end" direction="row" responsive={false}>
-        <Search inline={true} fill={false} size="medium" placeHolder="Search" dropAlign={{ right: 'right' }} />
+        {
+          // <Search inline={true} fill={false} size="medium" placeHolder="Search" dropAlign={{ right: 'right' }} />
+        }
         <Menu icon={<MenuIcon />} dropAlign={{ right: 'right' }} >
           <Anchor tag="div">
             <Link to="/">Home</Link>

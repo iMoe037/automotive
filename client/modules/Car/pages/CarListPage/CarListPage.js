@@ -44,7 +44,7 @@ class CarListPage extends Component {
       currentLocation = storeState.routing.locationBeforeTransitions;
 
       // Check if query changed and display data accordingly
-      if (currentLocation.length > 5) {
+      if (currentLocation.pathname.length > 5) {
         return;
       } else if (previousLocation.search !== currentLocation.search) {
         const search = currentLocation.search;

@@ -9,7 +9,7 @@ import CarMPGandSpeeds from '../CarMPGandSpeeds/CarMPGandSpeeds';
 function CarSummary(props) {
   if (props.summary) {
     return (
-      <Box pad="small" separator="horizontal" direction="row" alignContent="center">
+      <Box pad="small" separator="horizontal" direction="row" alignContent="center" justify="center">
         <Box align="center" pad={{ horizontal: 'medium' }}>
           <Heading align="center" tag="h2" margin="none">
             Summary

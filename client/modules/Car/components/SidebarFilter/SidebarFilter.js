@@ -111,7 +111,7 @@ class SidebarFilter extends Component {
 
   render() {
     return (
-      <Sidebar size="small" justify="start" pad="small">
+      <Sidebar size="small" justify="start" pad="small" fixed={true} colorIndex="neutral-4-t">
         <Label>Make</Label>
         <Select
           options={this.makes}
@@ -139,20 +139,24 @@ class SidebarFilter extends Component {
           />
         </Box>
         <Box align="center">
-          <Button
-            icon={<RefreshIcon />}
-            label="Reset"
-            secondary={true}
-            type="reset"
-            onClick={() => this.reset()}
-          />
-          <Button
-            icon={<FilterIcon />}
-            label="Filter"
-            primary={true}
-            type="submit"
-            onClick={() => this.filter()}
-          />
+          <Box pad="small">
+            <Button
+              icon={<RefreshIcon />}
+              label="Reset"
+              secondary={true}
+              type="reset"
+              onClick={() => this.reset()}
+            />
+          </Box>
+          <Box pad="small">
+            <Button
+              icon={<FilterIcon />}
+              label="Filter"
+              primary={true}
+              type="submit"
+              onClick={() => this.filter()}
+            />
+          </Box>
         </Box>
       </Sidebar>
     );
