@@ -23,16 +23,18 @@ class Paginate extends Component {
   componentDidMount() {
     const store = this.context.store;
     let currentPage;
+    let currentCount;
 
     const handleChange = () => {
-      let prevPage = currentPage;
+      const prevPage = currentPage;
+      const prevCount = currentCount;
+
       currentPage = this.getCurrentPage();
-      if (currentPage !== prevPage) {
-        const state = store.getState();
-        const count = state.app.carCount;
-        this.backPageDisable = this.disablePage('back', count);
-        this.forwardPageDisable = this.disablePage('forward', count);
-        prevPage = currentPage;
+      currentCount = this.getCurrentCount();
+
+      if (currentPage !== prevPage || currentCount !== prevCount) {
+        this.backPageDisable = this.disablePage('back', currentCount);
+        this.forwardPageDisable = this.disablePage('forward', currentCount);
       }
     };
     this.unsubscribe = store.subscribe(handleChange);
@@ -48,6 +50,14 @@ class Paginate extends Component {
     currentPage = currentPage.routing.locationBeforeTransitions.query.page;
     currentPage = currentPage ? parseInt(currentPage, 10) : 1;
     return currentPage;
+  }
+
+  getCurrentCount() {
+    const store = this.context.store;
+    let count = store.getState();
+    count = count.app.carCount;
+    count = count ? parseInt(count, 10) : count;
+    return count;
   }
 
   nextPage(add, num = 1) {
@@ -66,16 +76,13 @@ class Paginate extends Component {
     const currentPage = this.getCurrentPage();
     let disable = false;
 
-    const intCount = parseInt(count, 10);
-
     // 20 cars per page get the max
-    const max = (((currentPage + 1) * 20) > intCount);
-
+    const max = ((currentPage * 20) > count);
 
     if (direction === 'back' && currentPage === 1) {
       disable = true;
       return disable;
-    } else if (direction === 'forward' && max) {
+    } else if (direction === 'forward' && max || count < 20) {
       disable = true;
       return disable;
     }
@@ -86,12 +93,12 @@ class Paginate extends Component {
   render() {
     return (
       <Box direction="row" responsive={false}>
-        <h1>Count is: {this.props.count} </h1>
         <Anchor
           disabled={this.backPageDisable}
           onClick={() => this.nextPage(false)} icon={<LinkPreviousIcon />}
           animateIcon={true} primary={true}
         />
+        <h4>Total Cars {this.props.count}</h4>
         <Anchor
           disabled={this.forwardPageDisable}
           onClick={() => this.nextPage(true)} icon={<LinkNextIcon />}

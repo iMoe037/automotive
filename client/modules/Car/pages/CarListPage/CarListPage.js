@@ -8,7 +8,7 @@ import CarList from '../../components/CarList';
 
 // Import Actions
 import { fetchCars } from '../../CarActions';
-import { fetchFilter, fetchCarCount } from '../../../App/AppActions';
+import { fetchFilter } from '../../../App/AppActions';
 
 // Import Selectors
 import { getCars } from '../../CarReducer';
@@ -28,7 +28,6 @@ function filterParams(oldParam, newParam, store) {
   if (!_.isEqual(removeProp(oldParam, 'page'), removeProp(newParam, 'page'))) {
     const filter = _.isEmpty(newParam) ? initalState.filter : newParam;
     store.dispatch(fetchFilter(filter));
-    store.dispatch(fetchCarCount());
   }
 }
 
@@ -45,7 +44,9 @@ class CarListPage extends Component {
       currentLocation = storeState.routing.locationBeforeTransitions;
 
       // Check if query changed and display data accordingly
-      if (previousLocation.search !== currentLocation.search) {
+      if (currentLocation.length > 5) {
+        return;
+      } else if (previousLocation.search !== currentLocation.search) {
         const search = currentLocation.search;
         this.props.dispatch(fetchCars(search));
         window.scrollTo(0, 0);
