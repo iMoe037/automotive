@@ -1,7 +1,7 @@
 var webpack = require('webpack');
-// var cssnext = require('postcss-cssnext');
-// var postcssFocus = require('postcss-focus');
-// var postcssReporter = require('postcss-reporter');
+var cssnext = require('postcss-cssnext');
+var postcssFocus = require('postcss-focus');
+var postcssReporter = require('postcss-reporter');
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
@@ -36,16 +36,16 @@ module.exports = {
 
   module: {
     loaders: [
-      // {
-      //   test: /\.css$/,
-      //   exclude: /node_modules/,
-      //   loader: 'style-loader!css-loader?localIdentName=[name]__[local]__[hash:base64:5]&modules&importLoaders=1&sourceMap!postcss-loader',
-      // }, 
-      // {
-      //   test: /\.css$/,
-      //   include: /node_modules/,
-      //   loaders: ['style-loader', 'css-loader'],
-      // }, 
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        loader: 'style-loader!css-loader?localIdentName=[name]__[local]__[hash:base64:5]&modules&importLoaders=1&sourceMap!postcss-loader',
+      }, 
+      {
+        test: /\.css$/,
+        include: /node_modules/,
+        loaders: ['style-loader', 'css-loader'],
+      }, 
       {
         test: /\.jsx*$/,
         exclude: [/node_modules/, /.+\.config.js/],
@@ -87,13 +87,13 @@ module.exports = {
     ]
   },
 
-  // postcss: () => [
-  //   postcssFocus(),
-  //   cssnext({
-  //     browsers: ['last 2 versions', 'IE > 10'],
-  //   }),
-  //   postcssReporter({
-  //     clearMessages: true,
-  //   }),
-  // ],
+  postcss: () => [
+    postcssFocus(),
+    cssnext({
+      browsers: ['last 2 versions', 'IE > 10'],
+    }),
+    postcssReporter({
+      clearMessages: true,
+    }),
+  ],
 };
