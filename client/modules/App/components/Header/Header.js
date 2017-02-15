@@ -6,7 +6,7 @@ import Container from 'grommet/components/Header';
 import Box from 'grommet/components/Box';
 // import Search from 'grommet/components/Search';
 import Menu from 'grommet/components/Menu';
-import MenuIcon from 'grommet/components/icons/base/menu';
+import MenuIcon from 'grommet/components/icons/menu';
 import Anchor from 'grommet/components/Anchor';
 import Title from 'grommet/components/Title';
 
