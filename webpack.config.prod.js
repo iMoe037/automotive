@@ -27,7 +27,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json'],
+    extensions: ['', '.js', '.jsx', '.json', 'scss'],
     modules: [
       'client',
       'node_modules',
@@ -44,6 +44,9 @@ module.exports = {
         test: /\.css$/,
         include: /node_modules/,
         loaders: ['style-loader', 'css-loader'],
+      }, {
+        test: /\.scss$/,
+        loader: 'style!css!sass?outputStyle=compressed'
       }, {
         test: /\.jsx*$/,
         exclude: /node_modules/,
@@ -83,6 +86,11 @@ module.exports = {
       }
     }),
   ],
+   sassLoader: {
+    includePaths: [
+      './node_modules'
+    ]
+  },
 
   postcss: () => [
     postcssFocus(),
