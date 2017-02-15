@@ -1850,11 +1850,11 @@
 
 	var _Globe2 = _interopRequireDefault(_Globe);
 
-	var _SocialGithub = __webpack_require__(88);
+	var _SocialGithub = __webpack_require__(89);
 
 	var _SocialGithub2 = _interopRequireDefault(_SocialGithub);
 
-	var _SocialLinkedin = __webpack_require__(89);
+	var _SocialLinkedin = __webpack_require__(90);
 
 	var _SocialLinkedin2 = _interopRequireDefault(_SocialLinkedin);
 
@@ -1953,9 +1953,9 @@
 
 	var _Menu2 = _interopRequireDefault(_Menu);
 
-	var _menu = __webpack_require__(92);
+	var _Menu3 = __webpack_require__(87);
 
-	var _menu2 = _interopRequireDefault(_menu);
+	var _Menu4 = _interopRequireDefault(_Menu3);
 
 	var _Anchor = __webpack_require__(11);
 
@@ -1967,7 +1967,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var _ref = _jsx(_menu2.default, {});
+	var _ref = _jsx(_Menu4.default, {});
 
 	var _ref2 = _jsx(_Anchor2.default, {
 	  tag: 'div'
@@ -2384,11 +2384,11 @@
 
 	var _Box2 = _interopRequireDefault(_Box);
 
-	var _Star = __webpack_require__(90);
+	var _Star = __webpack_require__(91);
 
 	var _Star2 = _interopRequireDefault(_Star);
 
-	var _StarHalf = __webpack_require__(91);
+	var _StarHalf = __webpack_require__(92);
 
 	var _StarHalf2 = _interopRequireDefault(_StarHalf);
 
@@ -2914,7 +2914,7 @@
 
 	var _Filter2 = _interopRequireDefault(_Filter);
 
-	var _Refresh = __webpack_require__(87);
+	var _Refresh = __webpack_require__(88);
 
 	var _Refresh2 = _interopRequireDefault(_Refresh);
 
@@ -3688,37 +3688,37 @@
 /* 87 */
 /***/ function(module, exports) {
 
-	module.exports = require("grommet/components/icons/base/Refresh");
+	module.exports = require("grommet/components/icons/base/Menu");
 
 /***/ },
 /* 88 */
 /***/ function(module, exports) {
 
-	module.exports = require("grommet/components/icons/base/SocialGithub");
+	module.exports = require("grommet/components/icons/base/Refresh");
 
 /***/ },
 /* 89 */
 /***/ function(module, exports) {
 
-	module.exports = require("grommet/components/icons/base/SocialLinkedin");
+	module.exports = require("grommet/components/icons/base/SocialGithub");
 
 /***/ },
 /* 90 */
 /***/ function(module, exports) {
 
-	module.exports = require("grommet/components/icons/base/Star");
+	module.exports = require("grommet/components/icons/base/SocialLinkedin");
 
 /***/ },
 /* 91 */
 /***/ function(module, exports) {
 
-	module.exports = require("grommet/components/icons/base/StarHalf");
+	module.exports = require("grommet/components/icons/base/Star");
 
 /***/ },
 /* 92 */
 /***/ function(module, exports) {
 
-	module.exports = require("grommet/components/icons/base/menu");
+	module.exports = require("grommet/components/icons/base/StarHalf");
 
 /***/ },
 /* 93 */

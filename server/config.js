@@ -3,6 +3,4 @@ const config = {
   port: process.env.PORT || 8000,
 };
 
-console.log(process.env);
-
 export default config;
