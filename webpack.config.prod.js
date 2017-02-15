@@ -46,7 +46,7 @@ module.exports = {
         loaders: ['style-loader', 'css-loader'],
       }, {
         test: /\.scss$/,
-        loader: 'style-loader!css-loader!sass-loader?outputStyle=compressed'
+        loader: 'style!css!sass?outputStyle=compressed'
       }, {
         test: /\.jsx*$/,
         exclude: /node_modules/,
