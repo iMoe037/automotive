@@ -27,7 +27,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json', 'scss'],
+    extensions: ['', '.js', '.jsx', '.json', 'scss', 'css'],
     modules: [
       'client',
       'node_modules',
@@ -88,7 +88,8 @@ module.exports = {
   ],
    sassLoader: {
     includePaths: [
-      './node_modules'
+      './node_modules',
+      './node_modules/grommet/node_modules'
     ]
   },
 
