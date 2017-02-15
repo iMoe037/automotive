@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 // Import Components
 import Container from 'grommet/components/Header';
 import Box from 'grommet/components/Box';
-import Search from 'grommet/components/Search';
+// import Search from 'grommet/components/Search';
 import Menu from 'grommet/components/Menu';
 import MenuIcon from 'grommet/components/icons/base/menu';
 import Anchor from 'grommet/components/Anchor';
@@ -29,9 +29,11 @@ export function Header() {
           <Anchor tag="div">
             <Link to={{ pathname: '/cars', query: { page: 1 } }}>Browse</Link>
           </Anchor>
+          {/*
           <Anchor tag="div" className="active">
             Third
           </Anchor>
+          */}
         </Menu>
       </Box>
     </Container>

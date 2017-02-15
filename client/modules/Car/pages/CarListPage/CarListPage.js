@@ -4,7 +4,7 @@ import _ from 'lodash';
 import ReactDOM from 'react-dom';
 
 // Import Components
-import CarList from '../../components/CarList';
+import CarList from '../../components/CarList/CarList';
 
 // Import Actions
 import { fetchCars } from '../../CarActions';

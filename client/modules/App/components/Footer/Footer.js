@@ -10,16 +10,17 @@ import Globe from 'grommet/components/icons/base/Globe';
 import Github from 'grommet/components/icons/base/SocialGithub';
 import Linkedin from 'grommet/components/icons/base/SocialLinkedin';
 import Mail from 'grommet/components/icons/base/Mail';
+import Style from './Footer.css';
 
 export function Footer() {
   return (
     <Header justify="between" colorIndex="neutral-1-a" size="medium" wrap={true}>
-      <Box pad="small">
+      <Box pad="small" direction="row">
         <Paragraph margin="none">
           &copy; AutoMotive - Immad Mohamed - 2017
         </Paragraph>
       </Box>
-      <Menu direction="row" responsive={false}>
+      <Menu direction="row" responsive={false} className={Style.resize}>
         <Anchor icon={<Globe />} href="https://www.immadmohamed.com" target="_blank" />
         <Anchor icon={<Github />} href="https://github.com/iMoe037/automotive" target="_blank" />
         <Anchor icon={<Linkedin />} href="https://www.linkedin.com/in/immadmohamed" target="_blank" />
